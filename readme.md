@@ -2,4 +2,4 @@
 
 ### Papéis
 - Líder: Gabriel de Menezes
-- Desenvolvedores: 
+- Desenvolvedores: Vander Luis Barbosa da Silva
