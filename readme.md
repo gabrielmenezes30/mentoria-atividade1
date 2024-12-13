@@ -2,5 +2,5 @@
 
 ### Papéis
 
-- Líder: Gabriel de Menezes Gonçalves
+- Líder: Gabriel de Menezes 
 - Desenvolvedores: 
