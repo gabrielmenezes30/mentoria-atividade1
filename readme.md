@@ -1,5 +1,7 @@
 ## PRIMEIRO PROJETO DA MENTORIA, GRUPO 7.1
 
 ### Papéis
-- Líder: Gabriel de Menezes
-- Desenvolvedores: Vander Luis Barbosa da Silva
+
+- Líder: Gabriel de Menezes Gonçalves
+- Desenvolvedores: Kauan Carneiro, Vander Luis Barbosa da Silva
+
