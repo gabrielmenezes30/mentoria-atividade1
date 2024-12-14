@@ -5,7 +5,7 @@
 
 void temperatura(){
     float C, K, F;
-    printf("\ninforme a temperatura em Kelvin: ");
+    printf("\nInforme a temperatura em Kelvin: ");
     scanf("%f", &K);
     C = K - 273.15;
     F = ((K - 273.15) * 1.8) + 32;
