@@ -2,6 +2,7 @@
 
 
 //CRIAÇÃO DE FUNÇÕES ABAIXO
+
 void temperatura(){
     float C, K, F;
     printf("\ninforme a temperatura em Kelvin: ");
@@ -12,8 +13,12 @@ void temperatura(){
     printf("A temperatura em Fahrenheit: %.2f\n", F);
 }
 
+
+
+
 int main(){
     int opcao;
+
 
     printf("==========CONVESOES==========\n");
     printf("\n[1] - Unidades de comprimento");
@@ -25,6 +30,7 @@ int main(){
 
     switch(opcao){
         case 1: 
+
             printf("Voce escolheu unidade de comprimento.\n");
             break;
         case 2:
@@ -38,7 +44,7 @@ int main(){
             temperatura();
             break;
         default:
-            printf("Opcao Invalida.\n");
+            printf("Opcao Invalida.\n");           
             break;
     }
     
