@@ -3,4 +3,5 @@
 ### Papéis
 
 - Líder: Gabriel de Menezes Gonçalves
-- Desenvolvedores: Kauan Carneiro
+- Desenvolvedores: Kauan Carneiro, Vander Luis Barbosa da Silva
+
