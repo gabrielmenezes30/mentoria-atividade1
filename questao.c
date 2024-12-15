@@ -2,7 +2,7 @@
 
 int main(){
     printf("======CONVERSOR DE UNIDADES======\n");
-    printf("ESCOLHA O TIPO DE CONVERSAO\n1-COMPRIMENTO\n2-MASSA\n3-VOLUME\n");
+    printf("ESCOLHA O TIPO DE CONVERSAO\n1-COMPRIMENTO\n2-MASSA\n3-VOLUME\n4-TEMPERATURA\n5-VELOCIDADE\n6-POTENCIA\n7-AREA\n8-TEMPO\n9-MEMORIA\n");
     int tipo =0;
     scanf("%d", &tipo);
     switch (tipo)
@@ -182,10 +182,10 @@ int volume() {
         if(destino==1){
          printf("\nValor nao precisa de conversao.");
         }
-        if(destino==2){
+        else if(destino==2){
          printf("O valor convertido sera %.2f ml \n", num*1000);
         }
-        if(destino==3){
+        else if(destino==3){
          printf("O valor convertido sera %.3f m3 \n", num/1000);
         }    
     }
@@ -193,10 +193,10 @@ int volume() {
         if(destino==1){
          printf("O valor convertido sera %.3f L \n", num/1000);        
          }
-        if(destino==2){
+        else if(destino==2){
          printf("\nValor nao precisa de conversao.");
         }
-        if(destino==3){
+        else if(destino==3){
          printf("O valor convertido sera %.3f m3 \n", num/1000000);
         }    
     }
@@ -204,10 +204,10 @@ int volume() {
         if(destino==1){
          printf("O valor convertido sera %.2f L \n", num*1000);        
          }
-        if(destino==2){
+        else if(destino==2){
          printf("O valor convertido sera %.2f ml \n", num*1000000);        
         }
-        if(destino==3){
+        else if(destino==3){
          printf("\nValor nao precisa de conversao.");
         }    
     }
