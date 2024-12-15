@@ -2,6 +2,6 @@
 
 ### Papéis
 
-- Líder: Gabriel de Menezes 
+- Líder: Gabriel de Menezes Gonçalves
 - Desenvolvedores: Kauan Carneiro, Vander Luis Barbosa da Silva, Luigi Manzoli Almeida Lopez
 
