@@ -16,9 +16,11 @@ int main(){
     switch(opcao){
         case 1: 
             printf("Voce escolheu unidade de comprimento");
+            comprimento();
             break;
         case 2:
             printf("Voce escolheu unidade de massa");
+            massa();
             break;
         case 3:
             printf("Voce escolheu unidade de volume");
