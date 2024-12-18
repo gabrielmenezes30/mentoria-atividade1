@@ -76,8 +76,25 @@ void velocidade(){
             printf("\nA velocidade em quilometros por hora: %.2f km/h\n", kmh);
             printf("A velocidade em milhas por hora: %.2f mph\n", mph);
              break;
+        case 3:
+            printf("\nInforme a velocidade em milhas por hora: ");
+            scanf("%f", &mph);
+            ms = mph*0.44704;
+            kmh = mph*1.61;
+            printf("\nA velocidade em metros por segundo: %.2f m/s\n", ms);
+            printf("A velocidade em quilometros por hora: %.2f km/h\n", kmh);
+             break;
 
-int volume() {
+        default:
+            printf("Opcao Invalida.\n");
+             break;      
+    }
+
+}
+
+
+void volume(){
+
     printf("== Conversor de Volume ==\n");
     float valor=0;
     int medida_origem=0;
@@ -127,21 +144,7 @@ int volume() {
     }
 
 }
-        case 3:
-            printf("\nInforme a velocidade em milhas por hora: ");
-            scanf("%f", &mph);
-            ms = mph*0.44704;
-            kmh = mph*1.61;
-            printf("\nA velocidade em metros por segundo: %.2f m/s\n", ms);
-            printf("A velocidade em quilometros por hora: %.2f km/h\n", kmh);
-             break;
 
-        default:
-            printf("Opcao Invalida.\n");
-             break;      
-    }
-
-}
 int main(){
     int opcao;
 
