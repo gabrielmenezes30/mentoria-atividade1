@@ -63,6 +63,7 @@ case 3:
     else{
         printf("\nValor de destino invalido");
     }
+    break;
 default:
     printf("\nValor de origem invalido");
     break;
