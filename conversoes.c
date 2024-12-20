@@ -284,6 +284,62 @@ void volume(){
 
 }
 
+
+void tempo(){
+    int s, m, h;
+
+    int opcao;
+    printf("==========TEMPO=========");
+    printf("\nEscolha a tipo de conversão");
+    printf("\n[1] - segundo para minutos");
+    printf("\n[2] - segundo para horas");
+    printf("\n[3] - Minutos para segundos");
+    printf("\n[4] - Minutos para horas");
+    printf("\n[5] - Horas para Minutos");
+    printf("\n[6] - Horas para Segundos");
+    printf("\nQual opcao deseja: ");
+    scanf("%d", &opcao);
+
+    switch(opcao){
+        case 1:
+            printf("Digite o valor em segundo:");
+            scanf("%d", &s);
+            m = s/60;
+            printf("O valor em da conversao de segundos para minutos eh: %d", m);
+        break;
+        case 2:
+            printf("Digite o valor em segundo: ");
+            scanf("%d", &s);
+            h = s/3600;
+            printf("O valor em da conversao de segundos para Horas eh: %d", h);
+        break;
+        case 3:
+            printf("Digite o valor em Minutos: ");
+            scanf("%d", &m);
+            s = m*60;
+            printf("O valor em da conversao de Minutos para Segundos eh: %d", s);
+        break;
+        case 4:
+            printf("Digite o valor em Minutos: ");
+            scanf("%d", &m);
+            h = m/60;
+            printf("O valor em da conversao de Minutos para Hora eh: %d", h);
+        break;
+        case 5:
+            printf("Digite o valor em Horas: ");
+            scanf("%d", &h);
+            m = h*60;
+            printf("O valor em da conversao de Horas para Minuto eh: %d", m);
+        break;
+        case 6:
+            printf("Digite o valor em Horas: ");
+            scanf("%d", &h);
+            s = h*3600;
+            printf("O valor em da conversao de Horas para Segundos eh: %d", s);
+        break;
+    }
+    } 
+
 int main(){
     int opcao;
 
@@ -293,6 +349,7 @@ int main(){
     printf("\n[3] - Unidades de volume ");
     printf("\n[4] - Unidades de temperatura ");
     printf("\n[5] - Unidades de velocidade ");
+    printf("\n[6] - Unidade de tempo ");
     printf("\n\nEscolha a conversao voce deseja realizar: ");
     scanf("%d", &opcao);
 
@@ -325,7 +382,10 @@ int main(){
             printf("Voce escolheu unidade de velocidade.\n");
             velocidade();
             break;
-
+        case 6:
+            printf("Voce escolheu unidade de tempo. \n");
+            tempo();
+            break;
         default:
             printf("Opcao Invalida.\n");           
             break;
