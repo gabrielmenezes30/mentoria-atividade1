@@ -1,7 +1,3 @@
-# Programa Conversor de Unidades em Linguagem C
-
-## Descrição do Projeto
-O **Programa Conversor de Unidades** é um projeto desenvolvido em linguagem C com o objetivo de facilitar a conversão entre diferentes tipos de unidades de medida. Este projeto foi criado para reforçar conceitos iniciais de versionamento com Git e GitHub, promovendo o trabalho em equipe e o uso de ferramentas de controle de versão em um ambiente colaborativo.
 
 ## Funcionalidades
 O programa permite a conversão entre as seguintes unidades (implementações podem variar conforme as tarefas desenvolvidas pela equipe):
@@ -25,7 +21,6 @@ O programa permite a conversão entre as seguintes unidades (implementações po
    ```bash
    git clone https://github.com/SEU-USUARIO/conversor-unidades.git
    ```
-
 
 ## Fluxo de Trabalho
 1. O líder do projeto criou este repositório no GitHub.
@@ -57,4 +52,5 @@ A equipe foi dividida da seguinte forma:
 - **GCC** para compilação do código C.
 
 ---
+
 
