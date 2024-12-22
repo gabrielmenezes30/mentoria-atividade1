@@ -348,7 +348,11 @@ void potencia(){
     printf("\n[2] - Quilowatts (kW)");
     printf("\n[3] - Cavalos-vapor (cv)");
     printf("\nEscolha a unidade de potência que será convertida: ");
-    printf("\nInforme a potência em Watts: ");
+    scanf("%d", &opcao);
+
+    switch(opcao){
+        case 1:
+            printf("\nInforme a potência em Watts: ");
             scanf("%lf", &watts);
             kilowatts = watts / 1000;
             horsepower = watts / 735.5;
