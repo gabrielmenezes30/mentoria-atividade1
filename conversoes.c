@@ -284,7 +284,6 @@ void volume(){
 
 }
 
-
 void tempo(){
     int s, m, h;
 
@@ -340,6 +339,51 @@ void tempo(){
     }
     } 
 
+void potencia(){
+    double watts, kilowatts, horsepower;
+    int opcao;
+
+    printf("==========Potência==========\n");
+    printf("\n[1] - Watts (W)");
+    printf("\n[2] - Quilowatts (kW)");
+    printf("\n[3] - Cavalos-vapor (cv)");
+    printf("\nEscolha a unidade de potência que será convertida: ");
+    scanf("%d", &opcao);
+
+    switch(opcao){
+        case 1:
+            printf("\nInforme a potência em Watts: ");
+            scanf("%lf", &watts);
+            kilowatts = watts / 1000;
+            horsepower = watts / 735.5;
+            printf("\nA potência em Quilowatts: %.2f kW\n", kilowatts);
+            printf("A potência em Cavalos-vapor: %.2f cv\n", horsepower);
+            break;
+
+        case 2:
+            printf("\nInforme a potência em Quilowatts: ");
+            scanf("%lf", &kilowatts);
+            watts = kilowatts * 1000;
+            horsepower = watts / 735.5;
+            printf("\nA potência em Watts: %.2f W\n", watts);
+            printf("A potência em Cavalos-vapor: %.2f cv\n", horsepower);
+            break;
+
+        case 3:
+            printf("\nInforme a potência em Cavalos-vapor: ");
+            scanf("%lf", &horsepower);
+            watts = horsepower * 735.5;
+            kilowatts = watts / 1000;
+            printf("\nA potência em Watts: %.2f W\n", watts);
+            printf("A potência em Quilowatts: %.2f kW\n", kilowatts);
+            break;
+
+        default:
+            printf("Opção inválida.\n");
+            break;
+    }
+}
+    
 int main(){
     int opcao;
 
@@ -350,6 +394,8 @@ int main(){
     printf("\n[4] - Unidades de temperatura ");
     printf("\n[5] - Unidades de velocidade ");
     printf("\n[6] - Unidade de tempo ");
+    printf("\n[7] - Unidades de potencia ");
+
     printf("\n\nEscolha a conversao voce deseja realizar: ");
     scanf("%d", &opcao);
 
@@ -382,10 +428,17 @@ int main(){
             printf("Voce escolheu unidade de velocidade.\n");
             velocidade();
             break;
+            
         case 6:
             printf("Voce escolheu unidade de tempo. \n");
             tempo();
             break;
+            
+        case 7:
+            printf("Voce escolheu unidade de potencia.\n");
+            potencia();
+            break;
+
         default:
             printf("Opcao Invalida.\n");           
             break;
@@ -400,28 +453,4 @@ int main(){
 //CRIAÇÃO DE FUNÇÕES ABAIXO
 
 
-int main(){
-    int opcao;
 
-    printf("Qual conversao voce deseja realizar? ");
-    printf("\n[1] - Unidades de comprimento");
-    printf("\n[2] - Unidades de massa");
-    printf("\n[3] - Unidades de volume ");
-    scanf("%d", &opcao);
-
-    switch(opcao){
-        case 1: 
-            printf("Voce escolheu unidade de comprimento");
-            break;
-        case 2:
-            printf("Voce escolheu unidade de massa");
-            break;
-        case 3:
-            printf("Voce escolheu unidade de volume");
-            break;
-        default:
-            printf("Opcao Invalida");
-            break;
-    }
-    
-}

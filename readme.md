@@ -1,4 +1,3 @@
-
 ## Funcionalidades
 O programa permite a conversão entre as seguintes unidades (implementações podem variar conforme as tarefas desenvolvidas pela equipe):
 
@@ -52,5 +51,3 @@ A equipe foi dividida da seguinte forma:
 - **GCC** para compilação do código C.
 
 ---
-
-
