@@ -1,58 +1,64 @@
 #include <stdio.h>
 #include <locale.h>
 
-void convertWattsToOthers(double watts) {
-    double kilowatts = watts / 1000;
-    double horsepower = watts / 735.5; // 1 cv = 735.5 W (aprox.)
+void potencia(double valor, int medida_origem, int medida_destino) {
+    double kilowatts, horsepower, watts;
 
-    printf("%.2f Watts = %.2f Kilowatts\n", watts, kilowatts);
-    printf("%.2f Watts = %.2f Cavalos-vapor\n", watts, horsepower);
-}
-
-void convertKilowattsToOthers(double kilowatts) {
-    double watts = kilowatts * 1000;
-    double horsepower = watts / 735.5; // 1 cv = 735.5 W (aprox.)
-
-    printf("%.2f Kilowatts = %.2f Watts\n", kilowatts, watts);
-    printf("%.2f Kilowatts = %.2f Cavalos-vapor\n", kilowatts, horsepower);
-}
-
-void convertHorsepowerToOthers(double horsepower) {
-    double watts = horsepower * 735.5; // 1 cv = 735.5 W (aprox.)
-    double kilowatts = watts / 1000;
-
-    printf("%.2f Cavalos-vapor = %.2f Watts\n", horsepower, watts);
-    printf("%.2f Cavalos-vapor = %.2f Kilowatts\n", horsepower, kilowatts);
+    if (medida_origem == 1) { // Watts
+        kilowatts = valor / 1000;
+        horsepower = valor / 735.5;
+        
+        if (medida_destino == 1) {
+            printf("\nValor não precisa de conversão.\n");
+        } else if (medida_destino == 2) {
+            printf("O valor convertido será %.2f kW\n", kilowatts);
+        } else if (medida_destino == 3) {
+            printf("O valor convertido será %.2f cv\n", horsepower);
+        }
+    } else if (medida_origem == 2) { // Quilowatts
+        watts = valor * 1000;
+        horsepower = watts / 735.5;
+        
+        if (medida_destino == 1) {
+            printf("O valor convertido será %.2f W\n", watts);
+        } else if (medida_destino == 2) {
+            printf("\nValor não precisa de conversão.\n");
+        } else if (medida_destino == 3) {
+            printf("O valor convertido será %.2f cv\n", horsepower);
+        }
+    } else if (medida_origem == 3) { // Cavalos-vapor
+        watts = valor * 735.5;
+        kilowatts = watts / 1000;
+        
+        if (medida_destino == 1) {
+            printf("O valor convertido será %.2f W\n", watts);
+        } else if (medida_destino == 2) {
+            printf("O valor convertido será %.2f kW\n", kilowatts);
+        } else if (medida_destino == 3) {
+            printf("\nValor não precisa de conversão.\n");
+        }
+    } else {
+        printf("Escolha inválida!\n");
+    }
 }
 
 int main() {
-    int choice;
-    double value;
+    setlocale(LC_ALL, "");
+    printf("== Conversor de Unidades de Potência ==\n");
+    double valor = 0;
+    int medida_origem = 0;
+    int medida_destino = 0;
 
-    printf("Conversor de Unidades de Potência\n");
-    printf("Escolha uma opção:\n");
-    printf("1. Converter de Watts para outras unidades\n");
-    printf("2. Converter de Quilowatts para outras unidades\n");
-    printf("3. Converter de Cavalos-vapor para outras unidades\n");
-    printf("Escolha: ");
-    scanf("%d", &choice);
+    printf("INFORME O VALOR A SER CONVERTIDO: \n");
+    scanf("%lf", &valor);
 
-    printf("Insira o valor a ser convertido: ");
-    scanf("%lf", &value);
+    printf("\nINFORME A MEDIDA DE ORIGEM: \n1 - Watts (W) \n2 - Quilowatts (kW) \n3 - Cavalos-vapor (cv)\n");
+    scanf("%d", &medida_origem);
 
-    switch (choice) {
-        case 1:
-            convertWattsToOthers(value);
-            break;
-        case 2:
-            convertKilowattsToOthers(value);
-            break;
-        case 3:
-            convertHorsepowerToOthers(value);
-            break;
-        default:
-            printf("Escolha inválida!\n");
-    }
+    printf("\nINFORME A MEDIDA DE DESTINO: \n1 - Watts (W) \n2 - Quilowatts (kW) \n3 - Cavalos-vapor (cv)\n");
+    scanf("%d", &medida_destino);
+
+    potencia(valor, medida_origem, medida_destino);
 
     return 0;
 }
